@@ -28,6 +28,7 @@ namespace dotnet_rpg
         public void ConfigureServices(IServiceCollection services)
         {           
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<ICharacterService, CharacterService>();
             services.AddSwaggerGen(c =>
             {
